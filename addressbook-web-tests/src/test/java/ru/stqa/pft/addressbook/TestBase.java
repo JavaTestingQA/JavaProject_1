@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
-    private WebDriver wd;
+    public WebDriver wd;
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {
@@ -21,7 +21,7 @@ public class TestBase {
         login("user", "pass", By.xpath("//input[@value='Login']"), "admin", "secret");
     }
 
-    private void login(String user, String pass, By xpath, String username, String password) {
+    public void login(String user, String pass, By xpath, String username, String password) {
         wd.findElement(By.name(user)).click();
         wd.findElement(By.name(user)).clear();
         wd.findElement(By.name(user)).sendKeys(username);
@@ -69,7 +69,7 @@ public class TestBase {
 
     }
 
-    private boolean isElementPresent(By by) {
+    public boolean isElementPresent(By by) {
         try {
             wd.findElement(by);
             return true;
@@ -78,7 +78,7 @@ public class TestBase {
         }
     }
 
-    private boolean isAlertPresent() {
+    public boolean isAlertPresent() {
         try {
             wd.switchTo().alert();
             return true;
