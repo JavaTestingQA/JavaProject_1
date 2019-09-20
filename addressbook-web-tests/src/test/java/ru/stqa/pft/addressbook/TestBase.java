@@ -31,16 +31,16 @@ public class TestBase {
         wd.findElement(xpath).click();
     }
 
-    protected void logout(String logout) {
-        wd.findElement(By.linkText(logout)).click();
+    protected void logout() {
+        wd.findElement(By.linkText("Logout")).click();
     }
 
     protected void returnToGroupPage() {
         wd.findElement(By.linkText("group page")).click();
     }
 
-    protected void submitGroupCreation(String submit) {
-        wd.findElement(By.name(submit)).click();
+    protected void submitGroupCreation() {
+        wd.findElement(By.name("submit")).click();
     }
 
     protected void fillGroupForm(GroupData groupData) {
@@ -55,8 +55,8 @@ public class TestBase {
         wd.findElement(By.name("group_footer")).sendKeys(groupData.getFooter());
     }
 
-    protected void initGroupCreation(String s) {
-        wd.findElement(By.name(s)).click();
+    protected void initGroupCreation() {
+        wd.findElement(By.name("new")).click();
     }
 
     protected void gotoGroupPage() {
