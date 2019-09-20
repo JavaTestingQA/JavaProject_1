@@ -35,8 +35,8 @@ public class TestBase {
         wd.findElement(By.linkText(logout)).click();
     }
 
-    protected void returnToGroupPage(String s) {
-        wd.findElement(By.linkText(s)).click();
+    protected void returnToGroupPage() {
+        wd.findElement(By.linkText("group page")).click();
     }
 
     protected void submitGroupCreation(String submit) {
@@ -59,8 +59,8 @@ public class TestBase {
         wd.findElement(By.name(s)).click();
     }
 
-    protected void gotoGroupPage(String groups) {
-        wd.findElement(By.linkText(groups)).click();
+    protected void gotoGroupPage() {
+        wd.findElement(By.linkText("groups")).click();
     }
 
     @AfterMethod(alwaysRun = true)
