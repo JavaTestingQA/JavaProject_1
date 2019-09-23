@@ -1,11 +1,6 @@
 package ru.stqa.pft.addressbook;
 
-import java.util.concurrent.TimeUnit;
-
-import org.testng.annotations.*;
-
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 public class GroupDeletionTests extends TestBase {
 
@@ -17,11 +12,4 @@ public class GroupDeletionTests extends TestBase {
         returnToGroupPage();
     }
 
-    private void deleteSelectedGroups() {
-        wd.findElement(By.name("delete")).click();
-    }
-
-    private void selectGroup() {
-        wd.findElement(By.name("selected[]")).click();
-    }
 }
