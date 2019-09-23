@@ -99,6 +99,10 @@ public class TestBase {
         wd.findElement(By.linkText("home page")).click();
     }
 
+    public void goToHomePage() {
+        wd.findElement(By.linkText("home")).click();
+    }
+
     public void submitContactCreation() {
         wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
     }
@@ -123,5 +127,14 @@ public class TestBase {
 
     public void initContactCreation() {
         wd.findElement(By.linkText("add new")).click();
+    }
+
+    protected void deleteSelectedContact() {
+      wd.findElement(By.xpath("//input[@value='Delete']")).click();
+      wd.switchTo().alert().accept();
+    }
+
+    protected void selectContact() {
+      wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Александр'])[1]/preceding::input[1]")).click();
     }
 }
