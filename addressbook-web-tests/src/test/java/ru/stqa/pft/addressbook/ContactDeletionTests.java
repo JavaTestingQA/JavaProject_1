@@ -8,6 +8,7 @@ public class ContactDeletionTests extends TestBase{
   public void testContactDeletion() throws Exception {
     selectContact();
     deleteSelectedContact();
+    acceptContactDeleting();
     goToHomePage();
     logout();
   }

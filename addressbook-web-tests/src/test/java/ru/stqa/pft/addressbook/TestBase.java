@@ -131,7 +131,10 @@ public class TestBase {
 
     protected void deleteSelectedContact() {
       wd.findElement(By.xpath("//input[@value='Delete']")).click();
-      wd.switchTo().alert().accept();
+    }
+
+    protected void acceptContactDeleting() {
+        wd.switchTo().alert().accept();
     }
 
     protected void selectContact() {
