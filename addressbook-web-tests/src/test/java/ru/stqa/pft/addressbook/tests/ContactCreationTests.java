@@ -11,6 +11,6 @@ public class ContactCreationTests extends TestBase{
         app.getContactHelper().fillContactForm(new ContactData("Александр", "Дрозд", "г. Москва, улица Рябиновая, дом 7, корпус 5.", "8-978-485-74-11", "alexqamail@qa.ru"));
         app.getContactHelper().submitContactCreation();
         app.getContactHelper().returnToHomePage();
-        app.logout();
+        app.getSessionHelper().logout();
     }
 }

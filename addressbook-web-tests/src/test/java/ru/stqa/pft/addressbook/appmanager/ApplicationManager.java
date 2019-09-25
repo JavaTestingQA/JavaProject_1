@@ -27,10 +27,6 @@ public class ApplicationManager {
         contactHelper = new ContactHelper(wd);
     }
 
-    public void logout() {
-        wd.findElement(By.linkText("Logout")).click();
-    }
-
     public void stop() {
         wd.quit();
     }
@@ -53,10 +49,6 @@ public class ApplicationManager {
         }
     }
 
-    public void goToHomePage() {
-        wd.findElement(By.linkText("home")).click();
-    }
-
     public GroupHelper getGroupHelper() {
         return groupHelper;
     }
@@ -67,5 +59,9 @@ public class ApplicationManager {
 
     public ContactHelper getContactHelper() {
         return contactHelper;
+    }
+
+    public SessionHelper getSessionHelper() {
+        return sessionHelper;
     }
 }
