@@ -35,7 +35,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void acceptContactDeleting() {
-      wd.switchTo().alert().accept();
+        alertAccepting();
     }
 
     public void selectContact() {
