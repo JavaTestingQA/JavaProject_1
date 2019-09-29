@@ -39,7 +39,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void selectContact() {
-        click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Александр'])[1]/preceding::input[1]"));
+        click(By.xpath("(//input[@name='selected[]'])[1]"));
     }
 
     public void initContactModification() {
