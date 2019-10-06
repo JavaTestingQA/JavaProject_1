@@ -5,6 +5,8 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class HelperBase {
     protected WebDriver wd;
 
@@ -47,5 +49,8 @@ public class HelperBase {
 
     protected void alertAccepting() {
         wd.switchTo().alert().accept();
+        wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        wd.findElement(By.xpath("//div[@class='msgbox']"));
+        wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     }
 }
