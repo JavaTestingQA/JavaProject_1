@@ -21,7 +21,7 @@ public class ContactDeletionTests extends TestBase {
         app.getNavigationHelper().goToHomePage();
         List<ContactData> after = app.getContactHelper().getContactList();
         Assert.assertEquals(after.size(), before.size() - 1);
-        app.getSessionHelper().logout();
+        //app.getSessionHelper().logout(); Разлогирование закомментировано, т.к вызывает проблему при запуске набора тестов в одной сессии браузера.
 
         before.remove(before.size() - 1);
         Assert.assertEquals(before, after);
