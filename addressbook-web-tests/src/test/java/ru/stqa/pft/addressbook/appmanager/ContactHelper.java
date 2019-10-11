@@ -10,8 +10,6 @@ import ru.stqa.pft.addressbook.model.ContactData;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.stqa.pft.addressbook.tests.TestBase.app;
-
 public class ContactHelper extends HelperBase {
 
     public ContactHelper(WebDriver wd) {
@@ -20,6 +18,10 @@ public class ContactHelper extends HelperBase {
 
     public void returnToHomePage() {
         click(By.linkText("home page"));
+    }
+
+    public void goToHomePageThruHeader() {
+        click(By.linkText("home"));
     }
 
     public void submitContactCreation() {
@@ -82,8 +84,7 @@ public class ContactHelper extends HelperBase {
         selectContact(index);
         deleteSelectedContact();
         acceptContactDeleting();
-        app.goTo().contactPage();
-        //app.getSessionHelper().logout(); Разлогирование закомментировано, т.к вызывает проблему при запуске набора тестов в одной сессии браузера.
+        goToHomePageThruHeader();
     }
 
     public boolean isThereAContact() {
