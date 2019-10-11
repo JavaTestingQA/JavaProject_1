@@ -19,7 +19,7 @@ public class NavigationHelper extends HelperBase {
 
     }
 
-    public void goToHomePage() {
+    public void contactPage() {
         if (isElementPresent(By.id("maintable"))) {
             return;
         }

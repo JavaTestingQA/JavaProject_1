@@ -10,6 +10,8 @@ import ru.stqa.pft.addressbook.model.ContactData;
 import java.util.ArrayList;
 import java.util.List;
 
+import static ru.stqa.pft.addressbook.tests.TestBase.app;
+
 public class ContactHelper extends HelperBase {
 
     public ContactHelper(WebDriver wd) {
@@ -62,18 +64,26 @@ public class ContactHelper extends HelperBase {
         click(By.xpath("//input[@name='update'][2]"));
     }
 
-    public void createContact(ContactData contact, boolean creation) {
+    public void create(ContactData contact, boolean creation) {
         initContactCreation();
         fillContactForm(contact, creation);
         submitContactCreation();
         returnToHomePage();
     }
 
-    public void modifyContact(int index, ContactData contact) {
+    public void modify(int index, ContactData contact) {
         initContactModification(index); // Т.к для модификации выбор чекбоксом не нужен, выбор записи происходит здесь.
         fillContactForm(contact, false);
         submitContactModification();
         returnToHomePage();
+    }
+
+    public void delete(int index) {
+        selectContact(index);
+        deleteSelectedContact();
+        acceptContactDeleting();
+        app.goTo().contactPage();
+        //app.getSessionHelper().logout(); Разлогирование закомментировано, т.к вызывает проблему при запуске набора тестов в одной сессии браузера.
     }
 
     public boolean isThereAContact() {
@@ -84,7 +94,7 @@ public class ContactHelper extends HelperBase {
         return wd.findElements(By.xpath("//input[@name='selected[]']")).size();
     }
 
-    public List<ContactData> getContactList() {
+    public List<ContactData> list() {
 
         List<ContactData> contacts = new ArrayList<ContactData>();
         List <WebElement> elements = wd.findElements(By.name("entry"));
