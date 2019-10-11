@@ -69,6 +69,13 @@ public class ContactHelper extends HelperBase {
         returnToHomePage();
     }
 
+    public void modifyContact(int index, ContactData contact) {
+        initContactModification(index); // Т.к для модификации выбор чекбоксом не нужен, выбор записи происходит здесь.
+        fillContactForm(contact, false);
+        submitContactModification();
+        returnToHomePage();
+    }
+
     public boolean isThereAContact() {
         return isElementPresent(By.xpath("//img[@alt='Edit'][1]"));
     }
