@@ -1,8 +1,10 @@
 package ru.stqa.pft.addressbook.tests;
 
-import net.bytebuddy.implementation.bytecode.assign.TypeCasting;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
+
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -15,12 +17,17 @@ public class ContactPhoneTests extends TestBase {
         ContactData contact = app.contact().all().iterator().next();
         ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);
 
-        assertThat(contact.getHomeTelephone(), equalTo(cleaned(contactInfoFromEditForm.getHomeTelephone())));
-        assertThat(contact.getMobileTelephone(), equalTo(cleaned(contactInfoFromEditForm.getMobileTelephone())));
-        assertThat(contact.getWorkTelephone(), equalTo(cleaned(contactInfoFromEditForm.getWorkTelephone())));
+        assertThat(contact.getAllPhones(), equalTo(mergePhones(contactInfoFromEditForm)));
     }
 
-    public String cleaned(String phone) {
+    private String mergePhones(ContactData contact) {
+        return Arrays.asList(contact.getHomeTelephone(), contact.getMobileTelephone(), contact.getWorkTelephone())
+                .stream().filter((s) -> ! s.equals(""))
+                .map(ContactPhoneTests::cleaned)
+                .collect(Collectors.joining("\n"));
+    }
+
+    public static String cleaned(String phone) {
         return phone.replaceAll("\\s", "").replaceAll("[-()]", "");
     }
 }
