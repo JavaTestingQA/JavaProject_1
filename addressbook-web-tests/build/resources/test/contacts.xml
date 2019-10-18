@@ -1,0 +1,26 @@
+<list>
+  <contact>
+    <firstname>Александр 0</firstname>
+    <lastname>Невский 0</lastname>
+    <address>г. Москва, улица Рябиновая, дом 7, корпус 0.</address>
+    <homeTelephone>0-978-485-74-11</homeTelephone>
+    <email>alexqamail0@qa.ru</email>
+    <group>test1</group>
+  </contact>
+  <contact>
+    <firstname>Александр 1</firstname>
+    <lastname>Невский 1</lastname>
+    <address>г. Москва, улица Рябиновая, дом 7, корпус 1.</address>
+    <homeTelephone>1-978-485-74-11</homeTelephone>
+    <email>alexqamail1@qa.ru</email>
+    <group>test1</group>
+  </contact>
+  <contact>
+    <firstname>Александр 2</firstname>
+    <lastname>Невский 2</lastname>
+    <address>г. Москва, улица Рябиновая, дом 7, корпус 2.</address>
+    <homeTelephone>2-978-485-74-11</homeTelephone>
+    <email>alexqamail2@qa.ru</email>
+    <group>test1</group>
+  </contact>
+</list>
