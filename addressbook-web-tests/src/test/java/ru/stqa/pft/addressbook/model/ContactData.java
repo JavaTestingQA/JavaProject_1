@@ -194,7 +194,7 @@ public class ContactData {
     }
 
     public File getPhoto() {
-        return new File(photo);
+        return new File("src/test/resources/stru.png"); // в лекции 7.4 заменил переменную photo на относительную ссылку на файл, т.к вылетала NullPointerException.
     }
 
     @Override
@@ -206,7 +206,11 @@ public class ContactData {
 
         if (id != that.id) return false;
         if (firstname != null ? !firstname.equals(that.firstname) : that.firstname != null) return false;
-        return lastname != null ? lastname.equals(that.lastname) : that.lastname == null;
+        if (lastname != null ? !lastname.equals(that.lastname) : that.lastname != null) return false;
+        if (address != null ? !address.equals(that.address) : that.address != null) return false;
+        if (homeTelephone != null ? !homeTelephone.equals(that.homeTelephone) : that.homeTelephone != null)
+            return false;
+        return email != null ? email.equals(that.email) : that.email == null;
     }
 
     @Override
@@ -214,13 +218,16 @@ public class ContactData {
         int result = id;
         result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
         result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
+        result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + (homeTelephone != null ? homeTelephone.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
         return "ContactData{" +
-                "id='" + id + '\'' +
+                "id=" + id +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 '}';
