@@ -65,6 +65,7 @@ public class ContactCreationTests extends TestBase{
         Contacts after = app.db().contacts();
         assertThat(after, equalTo(
                 before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+        verifyContactListInUI(); // Для включения данной проверки (сравнение списков контактов загруженных из интерфейса и БД), добавить в конфигурацию запуска опцию -DverifyUI=true
     }
 
     // Старый тест создания (до параметризации), переименован и отключен.
@@ -98,5 +99,6 @@ public class ContactCreationTests extends TestBase{
         assertThat(app.contact().count(), equalTo(before.size()));
         Contacts after = app.db().contacts();
         assertThat(after, equalTo(before));
+        verifyContactListInUI(); // Для включения данной проверки (сравнение списков контактов загруженных из интерфейса и БД), добавить в конфигурацию запуска опцию -DverifyUI=true
     }
 }
