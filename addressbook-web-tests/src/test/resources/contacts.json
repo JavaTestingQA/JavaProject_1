@@ -2,25 +2,22 @@
   {
     "firstname": "Александр 0",
     "lastname": "Невский 0",
-    "address": "Moscow city, Ryabinovaya street, home 1.",
+    "address": "г. Москва, улица Рябиновая, дом 7, корпус 0.",
     "homeTelephone": "0-978-485-74-11",
-    "email": "alexqamail0@qa.ru",
-    "group": "test1"
+    "email": "alexqamail0@qa.ru"
   },
   {
     "firstname": "Александр 1",
     "lastname": "Невский 1",
-    "address": "Moscow city, Ryabinovaya street, home 2.",
+    "address": "г. Москва, улица Рябиновая, дом 7, корпус 1.",
     "homeTelephone": "1-978-485-74-11",
-    "email": "alexqamail1@qa.ru",
-    "group": "test1"
+    "email": "alexqamail1@qa.ru"
   },
   {
     "firstname": "Александр 2",
     "lastname": "Невский 2",
-    "address": "Moscow city, Ryabinovaya street, home 3.",
+    "address": "г. Москва, улица Рябиновая, дом 7, корпус 2.",
     "homeTelephone": "2-978-485-74-11",
-    "email": "alexqamail2@qa.ru",
-    "group": "test1"
+    "email": "alexqamail2@qa.ru"
   }
 ]
