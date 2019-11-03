@@ -34,7 +34,7 @@ public class HttpSession {
         post.setEntity(new UrlEncodedFormEntity(params));
         CloseableHttpResponse response = httpclient.execute(post);
         String body = geTextFrom(response);
-        return body.contains(String.format("<span class=\"user-info\">administrator</span>", username));
+        return body.contains(String.format("<span class=\"user-info\">%s</span>", username));
     }
 
     private String geTextFrom(CloseableHttpResponse response) throws IOException {
@@ -50,7 +50,7 @@ public class HttpSession {
         CloseableHttpResponse response = httpclient.execute(get);
         String body = geTextFrom(response);
 
-        return body.contains(String.format("<span class=\"user-info\">administrator</span>", username));
+        return body.contains(String.format("<span class=\"user-info\">%s</span>", username));
     }
 
 }
