@@ -22,6 +22,7 @@ public class ApplicationManager {
     private MailHelper mailHelper;
     private JamesHelper jamesHelper;
     private UsersHelper usersHelper;
+    private SoapHelper soapHelper;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -96,4 +97,12 @@ public class ApplicationManager {
         }
         return usersHelper;
     }
+
+    public SoapHelper soap() {
+        if (soapHelper == null) {
+            soapHelper = new SoapHelper(this);
+        }
+        return soapHelper;
+    }
+
 }
