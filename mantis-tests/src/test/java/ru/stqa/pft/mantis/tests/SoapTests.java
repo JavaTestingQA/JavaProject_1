@@ -31,4 +31,11 @@ public class SoapTests extends TestBase {
         Issue created = app.soap().addIssue(issue);
         assertEquals(issue.getSummary(), created.getSummary());
     }
+
+    @Test // Тест запускается если статус связанной ошибки "решена" и пропускается в остальных случаях.
+    public void testBugStatus() throws MalformedURLException, ServiceException, RemoteException {
+        int isueID = 0000001;
+        System.out.println(isIssueOpen(isueID));
+        skipIfNotFixed(isueID);
+    }
 }
