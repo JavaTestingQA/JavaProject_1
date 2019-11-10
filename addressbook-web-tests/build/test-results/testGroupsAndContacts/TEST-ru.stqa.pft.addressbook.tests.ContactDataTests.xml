@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.tests.ContactDataTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-10T07:59:03" hostname="UEFIPC1" time="0.562">
+  <properties/>
+  <testcase name="testContactData" classname="ru.stqa.pft.addressbook.tests.ContactDataTests" time="0.562"/>
+  <system-out><![CDATA[10:59:02.587 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Start test testContactData with parameters []
+10:59:03.679 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Stop test testContactData
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
