@@ -28,8 +28,8 @@
     <orderEntry type="library" name="Gradle: javax.validation:validation-api:1.1.0.Final" level="project" />
     <orderEntry type="library" name="Gradle: org.antlr:antlr-runtime:3.5.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.aspectj:aspectjrt:1.8.7" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish:javax.json:1.0.4" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.5" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish:javax.json:1.0.4" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.sun.jersey:jersey-client:1.18.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.sun.jersey:jersey-core:1.18.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.httpcomponents:httpclient:4.5.1" level="project" />

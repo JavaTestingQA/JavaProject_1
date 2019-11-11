@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1573499906242" stop="1573499927540">
+    <name>Suite1</name>
+    <test-cases>
+        <test-case start="1573499906654" stop="1573499908188" status="passed">
+            <name>ContactAddToGroup</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1573499908304" stop="1573499910273" status="passed">
+            <name>ContactRemoveFromGroup</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1573499910413" stop="1573499913675" status="passed">
+            <name>testBadContactCreation</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1573499913857" stop="1573499916961" status="passed">
+            <name>testContactCreation[ContactData{id=2147483647, firstname='Александр 0', lastname='Невский 0'}]</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1573499917078" stop="1573499920487" status="passed">
+            <name>testContactCreation[ContactData{id=2147483647, firstname='Александр 1', lastname='Невский 1'}]</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1573499920599" stop="1573499923683" status="passed">
+            <name>testContactCreation[ContactData{id=2147483647, firstname='Александр 2', lastname='Невский 2'}]</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1573499923698" stop="1573499926444" status="passed">
+            <name>testContactModification</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1573499926464" stop="1573499927022" status="passed">
+            <name>testContactDeletion</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1573499927248" stop="1573499927535" status="passed">
+            <name>testContactData</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+    </test-cases>
+    <labels/>
+</ns2:test-suite>
