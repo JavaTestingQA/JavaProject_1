@@ -20,6 +20,7 @@
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-classic:1.1.5" level="project" />
     <orderEntry type="library" name="Gradle: mysql:mysql-connector-java:5.1.38" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate:hibernate-core:5.0.1.Final" level="project" />
+    <orderEntry type="library" name="Gradle: org.robotframework:robotframework:3.0" level="project" />
     <orderEntry type="library" name="Gradle: ru.yandex.qatools.allure:allure-java-aspects:1.4.0.RC4" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:3.14.0" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-edge-driver:3.14.0" level="project" />
